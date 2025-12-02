@@ -2,7 +2,10 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Features from "@/components/Features";
+import VideoSection from "@/components/VideoSection";
 import CTA from "@/components/CTA";
+import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -12,8 +15,11 @@ const Index = () => {
         <Hero />
         <Stats />
         <Features />
+        <VideoSection />
         <CTA />
+        <ContactForm />
       </main>
+      <Footer />
     </div>
   );
 };
