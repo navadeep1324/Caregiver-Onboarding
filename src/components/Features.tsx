@@ -36,11 +36,11 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-24 bg-secondary/30">
+    <section className="py-24 bg-background">
       <div className="container px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Transform Your Workflow With PulseBoard's Capabilities
+            Transform Your Workflow With <span className="text-gradient">PulseBoard's Capabilities</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Everything you need to manage healthcare inquiries and conversions effectively
@@ -53,7 +53,7 @@ const Features = () => {
             return (
               <Card 
                 key={index}
-                className="p-8 bg-card hover:shadow-card transition-all duration-300 group border-border hover:border-primary/50"
+                className="p-8 bg-card border-0 shadow-card hover:shadow-lg transition-all duration-300 group rounded-2xl"
                 style={{ 
                   animation: `fade-in 0.6s ease-out forwards`,
                   animationDelay: `${index * 100}ms`,
@@ -61,8 +61,8 @@ const Features = () => {
                 }}
               >
                 <div className="space-y-4">
-                  <div className="p-3 bg-accent rounded-xl w-fit group-hover:bg-primary/10 transition-colors">
-                    <Icon className="w-6 h-6 text-accent-foreground group-hover:text-primary transition-colors" />
+                  <div className="p-4 bg-section-alt rounded-xl w-fit group-hover:bg-primary/10 transition-colors">
+                    <Icon className="w-7 h-7 text-primary" />
                   </div>
                   
                   <h3 className="text-xl font-bold text-foreground">

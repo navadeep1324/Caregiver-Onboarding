@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Features from "@/components/Features";
+import Clients from "@/components/Clients";
 import VideoSection from "@/components/VideoSection";
 import CTA from "@/components/CTA";
 import ContactForm from "@/components/ContactForm";
@@ -15,6 +16,7 @@ const Index = () => {
         <Hero />
         <Stats />
         <Features />
+        <Clients />
         <VideoSection />
         <CTA />
         <ContactForm />

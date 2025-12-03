@@ -2,7 +2,7 @@ import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-[hsl(210,100%,45%)] to-[hsl(186,100%,50%)] text-white">
+    <footer className="bg-gradient-hero text-white">
       <div className="container px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}

@@ -3,7 +3,7 @@ import { Menu } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border/50">
       <div className="container px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -31,7 +31,7 @@ const Header = () => {
           </nav>
           
           <div className="flex items-center gap-4">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-6 shadow-sm">
               Book Demo
             </Button>
             <button className="md:hidden">

@@ -50,12 +50,12 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-24 bg-secondary/30" id="contact">
+    <section className="py-24 bg-background" id="contact">
       <div className="container px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              Get in Touch
+              Get in <span className="text-gradient">Touch</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Ready to transform your healthcare management? Contact us today for a personalized demo
@@ -77,8 +77,8 @@ const ContactForm = () => {
               
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-accent rounded-lg">
-                    <Mail className="w-5 h-5 text-accent-foreground" />
+                  <div className="p-4 bg-section-alt rounded-xl">
+                    <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <div className="font-semibold text-foreground">Email</div>
@@ -89,8 +89,8 @@ const ContactForm = () => {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-accent rounded-lg">
-                    <Phone className="w-5 h-5 text-accent-foreground" />
+                  <div className="p-4 bg-section-alt rounded-xl">
+                    <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <div className="font-semibold text-foreground">Phone</div>
@@ -101,8 +101,8 @@ const ContactForm = () => {
                 </div>
                 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-accent rounded-lg">
-                    <MapPin className="w-5 h-5 text-accent-foreground" />
+                  <div className="p-4 bg-section-alt rounded-xl">
+                    <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <div className="font-semibold text-foreground">Address</div>
@@ -116,7 +116,7 @@ const ContactForm = () => {
             </div>
             
             {/* Contact Form */}
-            <div className="bg-card p-8 rounded-2xl shadow-card border border-border">
+            <div className="bg-card p-8 rounded-2xl shadow-card border-0">
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <FormField
@@ -126,7 +126,7 @@ const ContactForm = () => {
                       <FormItem>
                         <FormLabel>Full Name *</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" {...field} />
+                          <Input placeholder="John Doe" className="rounded-xl" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -140,7 +140,7 @@ const ContactForm = () => {
                       <FormItem>
                         <FormLabel>Email Address *</FormLabel>
                         <FormControl>
-                          <Input type="email" placeholder="john@example.com" {...field} />
+                          <Input type="email" placeholder="john@example.com" className="rounded-xl" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -154,7 +154,7 @@ const ContactForm = () => {
                       <FormItem>
                         <FormLabel>Phone Number *</FormLabel>
                         <FormControl>
-                          <Input type="tel" placeholder="+1 (234) 567-8900" {...field} />
+                          <Input type="tel" placeholder="+1 (234) 567-8900" className="rounded-xl" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -168,7 +168,7 @@ const ContactForm = () => {
                       <FormItem>
                         <FormLabel>Organization *</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your Healthcare Organization" {...field} />
+                          <Input placeholder="Your Healthcare Organization" className="rounded-xl" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -184,7 +184,7 @@ const ContactForm = () => {
                         <FormControl>
                           <Textarea 
                             placeholder="Tell us about your needs..." 
-                            className="min-h-[120px] resize-none"
+                            className="min-h-[120px] resize-none rounded-xl"
                             {...field} 
                           />
                         </FormControl>
@@ -195,7 +195,7 @@ const ContactForm = () => {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl py-6 text-lg font-semibold"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}

@@ -51,11 +51,15 @@ const stats = [
 
 const Stats = () => {
   return (
-    <section className="py-24 bg-background relative">
-      <div className="container px-4">
+    <section className="py-24 section-alt relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-glow/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+      
+      <div className="container px-4 relative z-10">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            How PulseBoard Redefines Healthcare Management
+            How PulseBoard Redefines <span className="text-gradient">Healthcare Management</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Experience the measurable edge that intelligent automation brings
@@ -68,7 +72,7 @@ const Stats = () => {
             return (
               <Card 
                 key={index}
-                className="p-8 bg-gradient-card border-2 border-accent hover:border-primary transition-all duration-300 hover:shadow-card group"
+                className="p-8 bg-card border-0 shadow-card hover:shadow-lg transition-all duration-300 group rounded-2xl"
                 style={{ 
                   animation: `fade-in 0.6s ease-out forwards`,
                   animationDelay: stat.delay,
@@ -76,8 +80,8 @@ const Stats = () => {
                 }}
               >
                 <div className="flex flex-col items-center text-center space-y-4">
-                  <div className="p-4 bg-accent rounded-2xl group-hover:bg-primary/10 transition-colors">
-                    <Icon className="w-8 h-8 text-accent-foreground group-hover:text-primary transition-colors" />
+                  <div className="p-4 bg-section-alt rounded-2xl group-hover:bg-primary/10 transition-colors">
+                    <Icon className="w-8 h-8 text-primary" />
                   </div>
                   
                   {stat.prefix && (
@@ -87,11 +91,11 @@ const Stats = () => {
                   )}
                   
                   <div className="space-y-1">
-                    <div className="text-5xl font-bold text-primary group-hover:scale-110 transition-transform">
+                    <div className="text-5xl font-bold text-primary group-hover:scale-105 transition-transform">
                       {stat.value}
                     </div>
                     {stat.suffix && (
-                      <div className="text-lg font-medium text-muted-foreground">
+                      <div className="text-lg font-medium text-muted-foreground uppercase">
                         {stat.suffix}
                       </div>
                     )}
