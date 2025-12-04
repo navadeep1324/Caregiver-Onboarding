@@ -1,26 +1,26 @@
 const clients = [
   {
-    name: "MedCare Health",
-    logo: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=200&h=80&fit=crop&q=80",
+    name: "Interim",
+    logo: "/src/assets/Interim.jpg",
   },
   {
-    name: "HealthFirst",
-    logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=80&fit=crop&q=80",
+    name: "Assured",
+    logo: "/src/assets/Assured.jpg",
   },
   {
-    name: "CarePoint",
-    logo: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=200&h=80&fit=crop&q=80",
+    name: "RAH",
+    logo: "/src/assets/RAH.jpg",
   },
   {
-    name: "WellNest",
-    logo: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=200&h=80&fit=crop&q=80",
+    name: "home instead",
+    logo: "/src/assets/home instead.jpg",
   },
 ];
 
 const OurClients = () => {
   return (
     <section className="py-20 bg-background">
-      <div className="container px-4">
+      <div className="container px-2">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Our <span className="text-gradient">Clients</span>
@@ -31,7 +31,7 @@ const OurClients = () => {
         </div>
 
         {/* Client Logos */}
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 max-w-5xl mx-auto">
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 max-w-8xl mx-auto">
           {clients.map((client, index) => (
             <div 
               key={index}
@@ -45,7 +45,7 @@ const OurClients = () => {
               <img 
                 src={client.logo} 
                 alt={client.name}
-                className="max-h-16 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                className="max-h-16 w-auto object-contain group-hover:grayscale-0 transition-all duration-300"
               />
             </div>
           ))}

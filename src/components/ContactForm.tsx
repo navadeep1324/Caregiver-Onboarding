@@ -20,6 +20,12 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 const ContactForm = () => {
+  // Get today's date in YYYY-MM-DD format
+  const today = new Date().toISOString().split('T')[0];
+  
+  // Default time set to 12:00 PM
+  const defaultTime = "12:00";
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   
@@ -62,147 +68,71 @@ const ContactForm = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">
-                  Let's Talk
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  Whether you're looking to streamline your inquiry management or boost your conversion rates, 
-                  we're here to help you succeed.
-                </p>
+          {/* Contact Form */}
+          <div className="section-seamless rounded-xl p-8 mb-8 max-w-3xl mx-auto bg-white/80 backdrop-blur-sm">
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <Input 
+                    id="name"
+                    type="text" 
+                    placeholder="Your Name" 
+                    className="bg-white/90 text-gray-900 placeholder-gray-500"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Input 
+                    id="email"
+                    type="email" 
+                    placeholder="Your Email" 
+                    className="bg-white/90 text-gray-900 placeholder-gray-500"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Input 
+                    id="phone"
+                    type="tel" 
+                    placeholder="Phone Number" 
+                    className="bg-white/90 text-gray-900 placeholder-gray-500"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Input 
+                    id="company"
+                    type="text" 
+                    placeholder="Company Name" 
+                    className="bg-white/90 text-gray-900 placeholder-gray-500"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Input 
+                    id="date"
+                    type="date" 
+                    defaultValue={today}
+                    className="bg-white/90 text-gray-900 placeholder-gray-500"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Input 
+                    id="time"
+                    type="time" 
+                    defaultValue={defaultTime}
+                    className="bg-white/90 text-gray-900 placeholder-gray-500"
+                  />
+                </div>
               </div>
-              
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-4 bg-section-alt rounded-xl">
-                    <Mail className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-foreground">Email</div>
-                    <a href="mailto:info@kleza.io" className="text-primary hover:underline">
-                      info@kleza.io
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="p-4 bg-section-alt rounded-xl">
-                    <Phone className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-foreground">Phone</div>
-                    <a href="tel:+1234567890" className="text-primary hover:underline">
-                      +1 (234) 567-890
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="p-4 bg-section-alt rounded-xl">
-                    <MapPin className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-foreground">Address</div>
-                    <p className="text-muted-foreground">
-                      123 Healthcare Ave<br />
-                      San Francisco, CA 94102
-                    </p>
-                  </div>
-                </div>
+              <div className="space-y-2">
+                <Textarea 
+                  id="message"
+                  placeholder="Your Message" 
+                  rows={4}
+                  className="bg-white/90 text-gray-900 placeholder-gray-500 resize-none"
+                />
               </div>
-            </div>
-            
-            {/* Contact Form */}
-            <div className="bg-card p-8 rounded-2xl shadow-card border-0">
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Full Name *</FormLabel>
-                        <FormControl>
-                          <Input placeholder="John Doe" className="rounded-xl" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email Address *</FormLabel>
-                        <FormControl>
-                          <Input type="email" placeholder="john@example.com" className="rounded-xl" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Phone Number *</FormLabel>
-                        <FormControl>
-                          <Input type="tel" placeholder="+1 (234) 567-8900" className="rounded-xl" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="organization"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Organization *</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Your Healthcare Organization" className="rounded-xl" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message *</FormLabel>
-                        <FormControl>
-                          <Textarea 
-                            placeholder="Tell us about your needs..." 
-                            className="min-h-[120px] resize-none rounded-xl"
-                            {...field} 
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-xl py-6 text-lg font-semibold"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </Button>
-                </form>
-              </Form>
-            </div>
+              <Button type="submit" size="lg" variant="secondary" className="text-lg px-10 w-full md:w-auto button-graident">
+                Schedule Demo
+              </Button>
+            </form>
           </div>
         </div>
       </div>

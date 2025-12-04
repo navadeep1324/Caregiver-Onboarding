@@ -33,13 +33,13 @@ const Hero = () => {
       
       {/* Content */}
       <div className="container relative z-10 px-4 py-20 text-center">
-        <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight tracking-tight">
+        <div className="max-w-5xl mx-auto space-y-8 animate-fade-in">
+          <h1 className="h1-heading">
             Transform Healthcare Communication with{" "}
-            <span className="text-white drop-shadow-lg">PulseBoard</span>
+            <span className="text-white drop-shadow-lg text-gradient">PulseBoard</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="para-text">
             Streamline inquiries, track conversions, and empower your team with real-time insights — 
             all in one intelligent platform
           </p>

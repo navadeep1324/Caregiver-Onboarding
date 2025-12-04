@@ -66,7 +66,7 @@ const Stats = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -91,7 +91,7 @@ const Stats = () => {
                   )}
                   
                   <div className="space-y-1">
-                    <div className="text-5xl font-bold text-primary group-hover:scale-105 transition-transform">
+                    <div className="text-4xl font-bold text-primary group-hover:scale-105 transition-transform">
                       {stat.value}
                     </div>
                     {stat.suffix && (

@@ -21,7 +21,7 @@ const CTA = () => {
       <div className="container px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Ready to Transform Your Healthcare Management?
+            Ready to Transform Your <span className="text-gradient">Healthcare Management?</span>
           </h2>
           
           <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
@@ -39,15 +39,15 @@ const CTA = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-2 border-white/80 text-white hover:bg-white/10 text-lg px-10 py-7 rounded-full font-semibold backdrop-blur-sm"
+              className="border-2 border-white/80 text-white hover:bg-white/10 text-lg px-10 py-7 rounded-full font-semibold backdrop-blur-sm button-item"
             >
               Schedule Demo
             </Button>
           </div>
           
-          <p className="text-white/70 text-sm">
+          {/* <p className="text-white/70 text-sm">
             No credit card required • 14-day free trial • Cancel anytime
-          </p>
+          </p> */}
         </div>
       </div>
       

@@ -39,7 +39,7 @@ const clientFeatures = [
 const Clients = () => {
   return (
     <section className="py-20">
-      <div className="container px-4">
+      <div className="container px-12">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Why Healthcare Leaders Choose <span className="text-gradient">PulseBoard</span>
@@ -55,7 +55,7 @@ const Clients = () => {
               key={index} 
               className={`py-16 ${index % 2 === 1 ? 'section-alt' : ''}`}
             >
-              <div className={`container px-4 flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
+              <div className={`container px-12 flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
                 {/* Text Content */}
                 <div className="flex-1 space-y-6">
                   <h3 className="text-3xl md:text-4xl font-bold text-foreground">

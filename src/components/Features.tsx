@@ -47,13 +47,13 @@ const Features = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <Card 
                 key={index}
-                className="p-8 bg-card border-0 shadow-card hover:shadow-lg transition-all duration-300 group rounded-2xl"
+                className="p-8 bg-card-2 border-0 shadow-card hover:shadow-lg transition-all duration-300 group rounded-2xl"
                 style={{ 
                   animation: `fade-in 0.6s ease-out forwards`,
                   animationDelay: `${index * 100}ms`,
@@ -61,7 +61,7 @@ const Features = () => {
                 }}
               >
                 <div className="space-y-4">
-                  <div className="p-4 bg-section-alt rounded-xl w-fit group-hover:bg-primary/10 transition-colors">
+                  <div className="p-4 bg-section-alt rounded-xl w-fit group-hover:bg-primary/10 transition-colors icon-box">
                     <Icon className="w-7 h-7 text-primary" />
                   </div>
                   
