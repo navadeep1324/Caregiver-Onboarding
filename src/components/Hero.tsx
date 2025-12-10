@@ -1,7 +1,104 @@
 import { Button } from "@/components/ui/button";
+import { useState, useRef, useEffect } from "react";
+import { Play, Pause, Volume2, VolumeX, Maximize } from "lucide-react";
 import heroElement from "@/assets/hero-element.png";
+import demoVideo from "@/assets/VoicaAI_II-Demo_1920x1080-updated.mp4";
 
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [volume, setVolume] = useState(1);
+  const [isMuted, setIsMuted] = useState(false);
+  const [duration, setDuration] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const updateProgress = () => {
+      const progress = (video.currentTime / video.duration) * 100;
+      setProgress(progress);
+      setCurrentTime(video.currentTime);
+    };
+
+    const handleLoadedMetadata = () => {
+      setDuration(video.duration);
+    };
+
+    video.addEventListener('timeupdate', updateProgress);
+    video.addEventListener('loadedmetadata', handleLoadedMetadata);
+
+    return () => {
+      video.removeEventListener('timeupdate', updateProgress);
+      video.removeEventListener('loadedmetadata', handleLoadedMetadata);
+    };
+  }, []);
+
+  const togglePlay = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (isPlaying) {
+      video.pause();
+    } else {
+      video.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleProgressChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const newProgress = parseFloat(e.target.value);
+    const newTime = (newProgress / 100) * video.duration;
+    video.currentTime = newTime;
+    setProgress(newProgress);
+  };
+
+  const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const newVolume = parseFloat(e.target.value);
+    video.volume = newVolume;
+    setVolume(newVolume);
+    setIsMuted(newVolume === 0);
+  };
+
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (isMuted) {
+      video.volume = volume || 0.5;
+      setVolume(volume || 0.5);
+      setIsMuted(false);
+    } else {
+      video.volume = 0;
+      setIsMuted(true);
+    }
+  };
+
+  const toggleFullscreen = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (!document.fullscreenElement) {
+      video.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+  };
+
+  const formatTime = (time: number) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  };
+
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Hero decorative element - bottom left */}
@@ -48,12 +145,12 @@ const Hero = () => {
           {/* Left Column - Content */}
           <div className="space-y-8 animate-fade-in text-left">
             <h1 className="h1-heading">
-              Transform <span className="text-white text-gradient">Healthcare Communication</span> with PulseBoard
+              Transform <span className="text-white text-gradient">Healthcare</span> <span className="text-white text-gradient">Communication</span> with PulseBoard
             </h1>
             
             <p className="para-text">
-              Streamline inquiries, track conversions, and empower your team with real-time insights — 
-              all in one intelligent platform
+              Streamline inquiries, track conversions, and empower <br></br>your team with real-time insights — 
+              all in one <br></br>intelligent platform
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
@@ -63,32 +160,114 @@ const Hero = () => {
               >
                 Book Demo
               </Button>
-              <Button 
+              {/* <Button 
                 size="lg" 
                 className="border-2 border-white bg-transparent text-white hover:bg-white/10 text-lg px-10 py-7 rounded-full font-semibold backdrop-blur-sm"
               >
                 Learn More
-              </Button>
+              </Button> */}
             </div>
           </div>
 
           {/* Right Column - Video */}
           <div className="relative animate-fade-in">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div 
+              className="relative rounded-2xl overflow-hidden shadow-2xl group border-8 border-transparent"
+              style={{
+                background: 'linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #9beaa6, #36c0ed) border-box'
+              }}
+            >
               <video 
-                className="w-full h-auto rounded-2xl"
-                autoPlay 
-                muted 
-                loop 
-                playsInline
+                ref={videoRef}
+                className="w-full h-auto rounded-l cursor-pointer"
+                onClick={togglePlay}
               >
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                <source src={demoVideo} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+              
+              {/* Video Controls Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {/* Progress Bar */}
+                <div className="mb-3">
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value={progress}
+                    onChange={handleProgressChange}
+                    className="w-full h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
+                    style={{
+                      background: `linear-gradient(to right, #10B2E6 0%, #10B2E6 ${progress}%, #4B5563 ${progress}%, #4B5563 100%)`
+                    }}
+                  />
+                </div>
+
+                {/* Control Buttons */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    {/* Play/Pause Button */}
+                    <button
+                      onClick={togglePlay}
+                      className="text-white hover:text-[#10B2E6] transition-colors"
+                      aria-label={isPlaying ? 'Pause' : 'Play'}
+                    >
+                      {isPlaying ? (
+                        <Pause className="w-6 h-6" />
+                      ) : (
+                        <Play className="w-6 h-6" />
+                      )}
+                    </button>
+
+                    {/* Volume Control */}
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={toggleMute}
+                        className="text-white hover:text-[#10B2E6] transition-colors"
+                        aria-label={isMuted ? 'Unmute' : 'Mute'}
+                      >
+                        {isMuted || volume === 0 ? (
+                          <VolumeX className="w-5 h-5" />
+                        ) : (
+                          <Volume2 className="w-5 h-5" />
+                        )}
+                      </button>
+                      <input
+                        type="range"
+                        min="0"
+                        max="1"
+                        step="0.1"
+                        value={isMuted ? 0 : volume}
+                        onChange={handleVolumeChange}
+                        className="w-20 h-1 bg-gray-600 rounded-lg appearance-none cursor-pointer"
+                        style={{
+                          background: `linear-gradient(to right, #10B2E6 0%, #10B2E6 ${(isMuted ? 0 : volume) * 100}%, #4B5563 ${(isMuted ? 0 : volume) * 100}%, #4B5563 100%)`
+                        }}
+                      />
+                    </div>
+
+                    {/* Time Display */}
+                    <span className="text-white text-sm font-medium">
+                      {formatTime(currentTime)} / {formatTime(duration)}
+                    </span>
+                  </div>
+
+                  {/* Fullscreen Button */}
+                  <button
+                    onClick={toggleFullscreen}
+                    className="text-white hover:text-[#10B2E6] transition-colors"
+                    aria-label="Fullscreen"
+                  >
+                    <Maximize className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+
               {/* Video overlay for aesthetics */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none rounded-2xl"></div>
             </div>
           </div>
+
 
         </div>
       </div>

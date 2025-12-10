@@ -2,13 +2,13 @@ import logo from "@/assets/Pulseboard-02-02.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F5F5F5]">
+    <footer className="bg-[#fff]">
       <div className="container px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-[30%_10%_10%_10%_35%] gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-[35%_10%_10%_10%_30%] gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4 image-div">
             <div>
-              <img src={logo} alt="PulseBoard" className="footer-img mb-3" />
+              <img src={logo} alt="PulseBoard" className="h-12 md:h-16 w-auto mb-3" />
               <p className="text-sm text-gray-600 leading-relaxed">
                 AI-powered conversational platform <br></br>for modern businesses
               </p>

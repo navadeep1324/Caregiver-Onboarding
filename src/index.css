@@ -139,7 +139,7 @@ All colors MUST be HSL.
   font-size:50px;
   font-weight:700;
   color: #0058A5;
-  line-height: 1.3em;
+  line-height: 1.1em;
 }
 .para-text{
   font-family: 'Inter', sans-serif;
@@ -223,7 +223,7 @@ font-size: 16px;
 
 .stat-subtitle {
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 600;
   background: linear-gradient(90deg, #31E6C8 0%, #10B2E6 50%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -301,4 +301,58 @@ font-size: 16px;
   height: 16rem; */
   opacity: 1;
   z-index: 0;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .h1-heading {
+    font-size: 32px;
+    line-height: 1.2em;
+  }
+  
+  .para-text {
+    font-size: 16px;
+  }
+  
+  .stat-value {
+    font-size: 36px;
+  }
+  
+  .stat-subtitle {
+    font-size: 22px;
+  }
+  
+  .stat-title {
+    font-size: 16px;
+  }
+  
+  .stat-description {
+    font-size: 13px;
+  }
+  
+  .button-item {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+  
+  .row-1, .row-2 {
+    padding: 30px 20px;
+  }
+  
+  .card-1, .card-2 {
+    padding: 30px 20px;
+  }
+  
+  .text-heading {
+    font-size: 28px;
+    line-height: 1.2em !important;
+  }
+  
+  .footer-img {
+    width: 100%;
+  }
+  
+  .image-div {
+    padding-left: 0;
+  }
 }
