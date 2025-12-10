@@ -13,27 +13,27 @@ const Header = () => {
           <div className="flex items-center gap-2">
             <img src={logo} alt="PulseBoard" className="h-12 md:h-16 w-auto" />
           </div>
-          
+
           <nav className="hidden md:flex items-center gap-8 ml-auto mr-5">
             <a href="#features" className="text-[#000] hover:text-[#10B2E6] transition-colors font-medium text-sm tracking-[0.5px]">
               Features
             </a>
             <a href="#solutions" className="text-[#000] hover:text-[#10B2E6] transition-colors font-medium text-sm tracking-[0.5px]">
-              Solutions
+              Products
             </a>
-            <a href="#pricing" className="text-[#000] hover:text-[#10B2E6] transition-colors font-medium text-sm tracking-[0.5px]">
-              Pricing
-            </a>
-            <a href="#signin" className="text-[#000] hover:text-[#10B2E6] transition-colors font-medium text-sm tracking-[0.5px]">
-              SignIn
+            <a href="#contact" className="text-[#000] hover:text-[#10B2E6] transition-colors font-medium text-sm tracking-[0.5px]">
+              Contact Us
             </a>
           </nav>
-          
+
           <div className="flex items-center gap-4">
-            <Button className="hidden md:block bg-[#0066FF] text-white hover:bg-[#0052CC] rounded-lg px-6 py-2 shadow-sm font-medium text-sm">
-              Book Demo
+            <Button
+              className="hidden md:block bg-[#0066FF] text-white hover:bg-[#0052CC] rounded-lg px-6 py-2 shadow-sm font-medium text-sm"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Book Now
             </Button>
-            <button 
+            <button
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
@@ -45,46 +45,41 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div 
-        className={`md:hidden fixed inset-0 top-[60px] bg-white transform transition-transform duration-300 ease-in-out ${
-          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+      <div
+        className={`md:hidden fixed inset-0 top-[60px] bg-white transform transition-transform duration-300 ease-in-out ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         <nav className="flex flex-col p-4 space-y-4">
-          <a 
-            href="#features" 
+          <a
+            href="#features"
             className="text-[#000] hover:text-[#10B2E6] transition-colors font-medium text-base tracking-[0.5px] py-3 border-b border-gray-100 block"
             onClick={() => setMobileMenuOpen(false)}
           >
             Features
           </a>
-          <a 
-            href="#solutions" 
+          <a
+            href="#solutions"
             className="text-[#000] hover:text-[#10B2E6] transition-colors font-medium text-base tracking-[0.5px] py-3 border-b border-gray-100 block"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Solutions
+            Products
           </a>
-          <a 
-            href="#pricing" 
+          <a
+            href="#contact"
             className="text-[#000] hover:text-[#10B2E6] transition-colors font-medium text-base tracking-[0.5px] py-3 border-b border-gray-100 block"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Pricing
-          </a>
-          <a 
-            href="#signin" 
-            className="text-[#000] hover:text-[#10B2E6] transition-colors font-medium text-base tracking-[0.5px] py-3 border-b border-gray-100 block"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            SignIn
+            Contact Us
           </a>
           <div className="pt-4">
-            <Button 
+            <Button
               className="w-full bg-[#0066FF] text-white hover:bg-[#0052CC] rounded-lg px-6 py-3 shadow-sm font-medium text-sm"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
-              Book Demo
+              Book Now
             </Button>
           </div>
         </nav>

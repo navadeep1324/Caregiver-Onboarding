@@ -54,44 +54,44 @@ const Stats = () => {
     <section className="py-24 stats-gradient-section relative overflow-hidden">
       <div className="container px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 items-stretch">
-          
+
           {/* First Column - 40% width (4 out of 10 columns) */}
           <div className="lg:col-span-4 flex flex-col justify-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground text-heading">
-              How PulseBoard Redefines Healthcare Management
+              See How PulseBoard Accelerates Growth
             </h2>
             <p className="text-xl text-muted-foreground text-desc">
-              Experience the measurable edge that <br></br>intelligent automation brings
+              Experience the Advantage That Transforms Business Performance
             </p>
           </div>
 
           {/* Second Column - 20% width (2 out of 10 columns) */}
           <div className="lg:col-span-2 bg-white rounded-xl py-10 px-8 shadow-lg flex flex-col space-y-3">
-            <div className="stat-value">20+</div>
-            <div className="stat-subtitle">Hours</div>
-            <h3 className="stat-title">Saves Time</h3>
+            <div className="stat-value">40%</div>
+            <div className="stat-subtitle">Fewer</div>
+            <h3 className="stat-title">Missed Leads</h3>
             <p className="stat-description">
-              Weekly saved through automated workflows and tracking workflows and tracking workflows
+              Unified call tracking eliminates prospect loss from disorganized workflows.
             </p>
           </div>
 
           {/* Third Column - 20% width (2 out of 10 columns) */}
           <div className="lg:col-span-2 bg-white rounded-2xl py-10 px-8 shadow-lg flex flex-col space-y-3">
-            <div className="stat-value">75%</div>
-            <div className="stat-subtitle">Faster</div>
-            <h3 className="stat-title">Lead Conversion</h3>
+            <div className="stat-value">35-45%</div>
+            <div className="stat-subtitle">Increase</div>
+            <h3 className="stat-title">Team Performance</h3>
             <p className="stat-description">
-              Higher conversion rates through intelligent follow-ups ntelligent follow-ups ntelligent follow-ups ntelligent
+              Real-time visibility boosts accountability and improves performance.
             </p>
           </div>
 
           {/* Fourth Column - 20% width (2 out of 10 columns) */}
           <div className="lg:col-span-2 bg-white rounded-2xl py-10 px-8 shadow-lg flex flex-col space-y-3">
-            <div className="stat-value">90%</div>
+            <div className="stat-value">50%</div>
             <div className="stat-subtitle">Faster</div>
-            <h3 className="stat-title">Better Team</h3>
+            <h3 className="stat-title">Decision-Making</h3>
             <p className="stat-description">
-              Performance improvement with data-driven insights Performance improvement with data-driven insights
+              Clear insight into calls and workload enhances efficiency and planning.
             </p>
           </div>
 

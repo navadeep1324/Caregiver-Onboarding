@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { useState, useRef, useEffect } from "react";
 import { Play, Pause, Volume2, VolumeX, Maximize } from "lucide-react";
 import heroElement from "@/assets/hero-element.png";
-import demoVideo from "@/assets/VoicaAI_II-Demo_1920x1080-updated.mp4";
+import demoVideo from "@/assets/PulseBoard-Demo_II_1920x1080.mp4";
+import videoPoster from "@/assets/PulseBoard_ Featured image_1920x1080.png";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -103,13 +104,13 @@ const Hero = () => {
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Hero decorative element - bottom left */}
       <div className="absolute left-0 bottom-0 z-0 pointer-events-none">
-        <img 
-          src={heroElement} 
-          alt="" 
+        <img
+          src={heroElement}
+          alt=""
           className="hero-element-image"
         />
       </div>
-      
+
       {/* Wave decoration */}
       {/* <div className="absolute inset-0 overflow-hidden">
         <svg 
@@ -137,26 +138,26 @@ const Hero = () => {
           />
         </svg>
       </div> */}
-      
+
       {/* Content - Two Column Layout */}
       <div className="container relative z-10 px-4 py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-          
+
           {/* Left Column - Content */}
           <div className="space-y-8 animate-fade-in text-left">
             <h1 className="h1-heading">
-              Transform <span className="text-white text-gradient">Healthcare</span> <span className="text-white text-gradient">Communication</span> with PulseBoard
+              Monitor <span className="text-white text-gradient">Business</span> and <span className="text-white text-gradient">Team Performance</span> in One Powerful Dashboard
             </h1>
-            
+
             <p className="para-text">
-              Streamline inquiries, track conversions, and empower <br></br>your team with real-time insights — 
-              all in one <br></br>intelligent platform
+              PulseBoard brings every call, lead, and team action into one smart dashboard—so you can see everything in real time, spot gaps instantly, and boost performance across your entire business.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="hover:bg-white/95 text-lg px-10 py-7 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 button-item"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Book Demo
               </Button>
@@ -171,21 +172,34 @@ const Hero = () => {
 
           {/* Right Column - Video */}
           <div className="relative animate-fade-in">
-            <div 
+            <div
               className="relative rounded-2xl overflow-hidden shadow-2xl group border-8 border-transparent"
               style={{
                 background: 'linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #9beaa6, #36c0ed) border-box'
               }}
             >
-              <video 
+              <video
                 ref={videoRef}
                 className="w-full h-auto rounded-l cursor-pointer"
+                poster={videoPoster}
                 onClick={togglePlay}
               >
                 <source src={demoVideo} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              
+
+              {/* Play Button Overlay - Center */}
+              {!isPlaying && (
+                <div
+                  className="absolute inset-0 flex items-center justify-center cursor-pointer z-20"
+                  onClick={togglePlay}
+                >
+                  <div className="w-20 h-20 rounded-full bg-black/60 flex items-center justify-center hover:bg-black/80 transition-all duration-300 hover:scale-110">
+                    <Play className="w-10 h-10 text-white ml-1" fill="white" />
+                  </div>
+                </div>
+              )}
+
               {/* Video Controls Overlay */}
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {/* Progress Bar */}
@@ -271,7 +285,7 @@ const Hero = () => {
 
         </div>
       </div>
-      
+
       {/* Bottom curve */}
       {/* <div className="absolute bottom-0 left-0 right-0">
         <svg 

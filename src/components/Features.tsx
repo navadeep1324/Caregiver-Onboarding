@@ -3,34 +3,34 @@ import { Card } from "@/components/ui/card";
 
 const features = [
   {
-    title: "Inquiry Management",
-    description: "Track and manage all inquiries from multiple sources in one unified dashboard. Never miss a potential client again.",
+    title: "Complete Call Tracking",
+    description: "Record every incoming call along with source, time, purpose, and caller details.",
   },
   {
-    title: "Team Performance",
-    description: "Monitor team member performance with detailed analytics on inquiries, assessments, and conversions.",
+    title: "Source Identification",
+    description: "Track whether prospects came from website, ads, referrals, walk-ins, or other channels.",
   },
   {
-    title: "Conversion Tracking",
-    description: "Track the complete journey from inquiry to conversion with real-time analytics and insights.",
+    title: "Team Activity Monitoring",
+    description: "See which team member handled each call and what actions were taken at every stage.",
   },
   {
-    title: "Advanced Analytics",
-    description: "Get comprehensive insights with customizable reports, charts, and data visualization tools.",
+    title: "Full Prospect Journey Mapping",
+    description: "Follow a client's path from the first call to assessment, lead creation, and beyond.",
   },
   {
-    title: "Real-Time Alerts",
-    description: "Stay informed with instant notifications for new inquiries, updates, and important milestones.",
+    title: "Real-Time Insights & Alerts",
+    description: "Instant visibility into new calls, pending follow-ups, and team workloads.",
   },
   {
-    title: "Assessment Management",
-    description: "Create, track, and manage assessments with seamless integration into your workflow.",
+    title: "Lead Source Analysis",
+    description: "Identify which channels bring the highest-value prospects and generate better ROI.",
   },
 ];
 
 const Features = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-cyan-50 to-blue-50 relative overflow-hidden">
+    <section id="features" className="py-24 bg-gradient-to-br from-cyan-50 to-blue-50 relative overflow-hidden">
       {/* Decorative wave element */}
       {/* <div className="absolute bottom-0 left-0 w-64 h-64 opacity-20">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -45,20 +45,20 @@ const Features = () => {
       <div className="container px-4 relative z-10">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            Transform Your Workflow <br></br>With <span className="text-gradient">PulseBoard's Capabilities</span>
+            Everything Your Business Needs, <span className="text-gradient">In One Place</span>
           </h2>
           <p className="text-xl text-foreground max-w-3xl mx-auto">
-            Everything you need to manage healthcare inquiries and conversions effectively
+            Specializations that empower teams, streamline processes, and drive smarter decisions
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {features.map((feature, index) => {
             return (
-              <Card 
+              <Card
                 key={index}
                 className="p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 group rounded-3xl relative"
-                style={{ 
+                style={{
                   animation: `fade-in 0.6s ease-out forwards`,
                   animationDelay: `${index * 100}ms`,
                   opacity: 0,
@@ -73,7 +73,7 @@ const Features = () => {
                   <h3 className="text-2xl font-semibold text-blue-900">
                     {feature.title}
                   </h3>
-                  
+
                   <p className="text-gray-700 leading-relaxed text-sm pb-5">
                     {feature.description}
                   </p>

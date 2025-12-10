@@ -27,8 +27,8 @@ const ContactForm = () => {
   };
 
   return (
-    <section 
-      className="py-16 md:py-20 relative overflow-hidden" 
+    <section
+      className="py-16 md:py-20 relative overflow-hidden"
       id="contact"
       style={{
         backgroundColor: '#D4F5F5',
@@ -64,10 +64,11 @@ const ContactForm = () => {
               Get in <span className="text-[#10B2E6]">Touch</span>
             </h2>
             <p className="text-base md:text-lg text-gray-800">
-              Ready to transform your healthcare management?
+              Talk to us to see how real-time visibility can transform your business.
+
             </p>
             <p className="text-base md:text-lg text-gray-800">
-              Contact us today for a personalized demo
+              Schedule a demo now!
             </p>
           </div>
 

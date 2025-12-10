@@ -4,17 +4,17 @@ const Footer = () => {
   return (
     <footer className="bg-[#fff]">
       <div className="container px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-[35%_10%_10%_10%_30%] gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-[30%_15%_15%_15%_25%] gap-8 mb-8">
           {/* Brand */}
-          <div className="space-y-4 image-div">
+          <div className="space-y-4">
             <div>
-              <img src={logo} alt="PulseBoard" className="h-12 md:h-16 w-auto mb-3" />
+              <img src={logo} alt="PulseBoard" className="h-14 md:h-16 w-auto mb-3" />
               <p className="text-sm text-gray-600 leading-relaxed">
                 AI-powered conversational platform <br></br>for modern businesses
               </p>
             </div>
           </div>
-          
+
           {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-[#003D82] text-sm mb-4">Quick Links</h3>
@@ -25,8 +25,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
-                  Pricing
+                <a href="#solutions" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
+                  Products
                 </a>
               </li>
               <li>
@@ -41,7 +41,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           {/* Company */}
           <div>
             <h3 className="font-semibold text-[#003D82] text-sm mb-4">Company</h3>
@@ -68,7 +68,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           {/* Resources */}
           <div>
             <h3 className="font-semibold text-[#003D82] text-sm mb-4">Resources</h3>
@@ -99,7 +99,10 @@ const Footer = () => {
           {/* Product Demos */}
           <div>
             <h3 className="font-semibold text-[#003D82] text-sm mb-4">Product Demos</h3>
-            <button className="px-6 py-2.5 bg-[#10B2E6] hover:bg-[#0EA1D5] text-white text-sm font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg button-item button-item-2">
+            <button
+              className="px-6 py-2.5 bg-[#10B2E6] hover:bg-[#0EA1D5] text-white text-sm font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg button-item button-item-2"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Book a Demo
             </button>
           </div>
