@@ -20,7 +20,7 @@ const Index = () => {
         <Clients />
         <VideoSection />
         <OurClients />
-        <CTA />
+        {/* <CTA /> */}
         <ContactForm />
       </main>
       <Footer />

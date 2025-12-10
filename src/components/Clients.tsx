@@ -1,95 +1,133 @@
-import { CheckCircle2 } from "lucide-react";
-
-const clientFeatures = [
-  {
-    title: "AI-Powered Call Analytics",
-    description: "Our advanced AI analyzes every conversation to extract actionable insights, identify patterns, and highlight opportunities for improvement.",
-    benefits: [
-      "Real-time sentiment analysis",
-      "Automatic call transcription",
-      "Key moment detection"
-    ],
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop",
-    imageAlt: "Team collaboration on analytics dashboard"
-  },
-  {
-    title: "Smart Lead Management",
-    description: "Convert more leads with intelligent tracking and automated follow-ups. Never miss an opportunity with our comprehensive lead scoring system.",
-    benefits: [
-      "Automated lead scoring",
-      "Smart follow-up reminders",
-      "Conversion tracking"
-    ],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    imageAlt: "Lead management dashboard"
-  },
-  {
-    title: "Team Performance Insights",
-    description: "Empower your team with detailed performance metrics and coaching insights. Identify top performers and areas for growth.",
-    benefits: [
-      "Individual performance tracking",
-      "Team benchmarking",
-      "Custom coaching reports"
-    ],
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
-    imageAlt: "Team performance analytics"
-  }
-];
+import group44 from "@/assets/Group 44.png";
+import group45 from "@/assets/Group 45.png";
+import heroElement from "@/assets/hero-element.png";
 
 const Clients = () => {
   return (
-    <section className="py-20">
-      <div className="container px-12">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Why Healthcare Leaders Choose <span className="text-gradient">PulseBoard</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover how our platform transforms healthcare communication and drives better outcomes
-          </p>
-        </div>
+    <section className="py-16 px-4 lg:px-8 bg-white">
+      <div className="container mx-auto max-w-7xl space-y-8">
+        {/* First Section - Blue Background */}
+        <div className="feature-card-bg py-16  relative overflow-hidden rounded-3xl">
+        {/* Decorative pattern in background */}
+        {/* <div className="absolute bottom-0 right-0 w-96 h-96 opacity-10">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1" fill="white" />
+            </pattern>
+            <rect width="200" height="200" fill="url(#grid)" />
+          </svg>
+        </div> */}
 
-        <div className="space-y-0">
-          {clientFeatures.map((feature, index) => (
-            <div 
-              key={index} 
-              className={`py-16 ${index % 2 === 1 ? 'section-alt' : ''}`}
-            >
-              <div className={`container px-12 flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
-                {/* Text Content */}
-                <div className="flex-1 space-y-6">
-                  <h3 className="text-3xl md:text-4xl font-bold text-foreground">
-                    {feature.title}
-                  </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    {feature.description}
-                  </p>
-                  <ul className="space-y-3">
-                    {feature.benefits.map((benefit, i) => (
-                      <li key={i} className="flex items-center gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                        <span className="text-foreground">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+        <div className="relative">
+          <div className="container mx-auto max-w-7xl">
+            <div className="flex flex-col lg:flex-row items-center row-1">
+              {/* Left - Content */}
+              <div className="text-white space-y-6 relative z-10 lg:w-1/2 card-1">
+                <h2 className="text-4xl md:text-5xl font-bold">
+                  Team Performance<br />Insights
+                </h2>
+                <p className="text-lg opacity-90 leading-relaxed">
+                  Empower your team with detailed performance metrics and coaching insights. Identify top performers and areas for growth.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                    <span>Individual performance tracking</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                    <span>Team benchmarking</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                    <span>Custom coaching reports</span>
+                  </li>
+                </ul>
+              </div>
 
-                {/* Image */}
-                <div className="flex-1">
-                  <div className="relative rounded-2xl overflow-hidden shadow-card">
-                    <img 
-                      src={feature.image} 
-                      alt={feature.imageAlt}
-                      className="w-full h-[300px] md:h-[400px] object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-                  </div>
+              {/* Right - Image extending to edge */}
+              <div className="relative lg:w-1/2 w-full lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2">
+                {/* Hero element background decoration */}
+                <div className="">
+                  <img 
+                    src={heroElement} 
+                    alt="" 
+                    className="hero-bg-left"
+                  />
                 </div>
+                
+                <img 
+                  src={group44} 
+                  alt="Team Performance Dashboard" 
+                  className="w-full h-auto rounded-l-2xl lg:rounded-r-none relative z-10"
+                />
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
+
+      {/* Second Section - Green Background */}
+      <div className="feature-card-bg-2 py-16 relative overflow-hidden rounded-3xl">
+        {/* Decorative element */}
+        {/* <div className="absolute top-0 left-0 w-96 h-96 opacity-10">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <pattern id="grid2" width="20" height="20" patternUnits="userSpaceOnUse">
+              <circle cx="2" cy="2" r="1" fill="white" />
+            </pattern>
+            <rect width="200" height="200" fill="url(#grid2)" />
+          </svg>
+        </div> */}
+
+        <div className="relative">
+          <div className="container mx-auto max-w-7xl">
+            <div className="flex flex-col lg:flex-row items-center row-2">
+              {/* Left - Image extending to edge */}
+              <div className="relative lg:w-1/2 w-full lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 order-2 lg:order-1">
+                {/* Hero element background decoration */}
+                <div className="hero-bg-right">
+                  <img 
+                    src={heroElement} 
+                    alt="" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                <img 
+                  src={group45} 
+                  alt="Performance Analytics Dashboard" 
+                  className="w-full h-auto rounded-r-2xl lg:rounded-l-none relative z-10"
+                />
+              </div>
+
+              {/* Right - Content */}
+              <div className="text-white space-y-6 relative z-10 lg:w-1/2 lg:ml-auto order-1 lg:order-2 card-2">
+                <h2 className="text-4xl md:text-5xl font-bold">
+                  Team Performance<br />Insights
+                </h2>
+                <p className="text-lg opacity-90 leading-relaxed">
+                  Empower your team with detailed performance metrics and coaching insights. Identify top performers and areas for growth.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                    <span>Individual performance tracking</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                    <span>Team benchmarking</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
+                    <span>Custom coaching reports</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </section>
   );
 };

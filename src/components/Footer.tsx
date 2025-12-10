@@ -1,78 +1,42 @@
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import logo from "@/assets/Pulseboard-02-02.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-hero text-white">
-      <div className="container px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="bg-[#F5F5F5]">
+      <div className="container px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-[30%_10%_10%_10%_35%] gap-8 mb-8">
           {/* Brand */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
-                <span className="text-primary font-bold text-xl">K</span>
-              </div>
-              <div>
-                <div className="font-bold text-xl">Kleza</div>
-                <div className="text-sm text-white/80">PulseBoard</div>
-              </div>
-            </div>
-            <p className="text-white/80 leading-relaxed">
-              Transforming healthcare communication with intelligent inquiry management and analytics.
-            </p>
-            <div className="flex gap-3">
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
+          <div className="space-y-4 image-div">
+            <div>
+              <img src={logo} alt="PulseBoard" className="footer-img mb-3" />
+              <p className="text-sm text-gray-600 leading-relaxed">
+                AI-powered conversational platform <br></br>for modern businesses
+              </p>
             </div>
           </div>
           
-          {/* Product */}
+          {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Product</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-[#003D82] text-sm mb-4">Quick Links</h3>
+            <ul className="space-y-2">
               <li>
-                <a href="#features" className="text-white/80 hover:text-white transition-colors">
+                <a href="#features" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
                   Features
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
+                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
+                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
                   Integrations
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
-                  Updates
+                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
+                  API
                 </a>
               </li>
             </ul>
@@ -80,25 +44,25 @@ const Footer = () => {
           
           {/* Company */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Company</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-[#003D82] text-sm mb-4">Company</h3>
+            <ul className="space-y-2">
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
-                  About Us
+                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
+                  About
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
+                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-white/80 hover:text-white transition-colors">
+                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
                   Contact
                 </a>
               </li>
@@ -107,50 +71,47 @@ const Footer = () => {
           
           {/* Resources */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Resources</h3>
-            <ul className="space-y-3">
+            <h3 className="font-semibold text-[#003D82] text-sm mb-4">Resources</h3>
+            <ul className="space-y-2">
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
-                  Documentation
+                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
+                  Privacy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
-                  Help Center
+                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
+                  Terms
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
-                  Privacy Policy
+                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
+                  Security
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white/80 hover:text-white transition-colors">
-                  Terms of Service
+                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
+                  Compliance
                 </a>
               </li>
             </ul>
           </div>
-        </div>
-        
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/20">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/70 text-sm">
-              © 2025 Kleza PulseBoard. All rights reserved.
-            </p>
-            <div className="flex gap-6 text-sm">
-              <a href="#" className="text-white/70 hover:text-white transition-colors">
-                Privacy
-              </a>
-              <a href="#" className="text-white/70 hover:text-white transition-colors">
-                Terms
-              </a>
-              <a href="#" className="text-white/70 hover:text-white transition-colors">
-                Cookies
-              </a>
-            </div>
+
+          {/* Product Demos */}
+          <div>
+            <h3 className="font-semibold text-[#003D82] text-sm mb-4">Product Demos</h3>
+            <button className="px-6 py-2.5 bg-[#10B2E6] hover:bg-[#0EA1D5] text-white text-sm font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg button-item button-item-2">
+              Book a Demo
+            </button>
           </div>
+        </div>
+      </div>
+
+      {/* Copyright Bar */}
+      <div className="bg-[#10B2E6] py-3">
+        <div className="container px-4">
+          <p className="text-center text-white text-sm">
+            © 2025 PulseBoard. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

@@ -5,6 +5,8 @@
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 
 @layer base {
   :root {
@@ -110,11 +112,11 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 }
 
@@ -129,36 +131,174 @@ All colors MUST be HSL.
   }
 }
 .text-gradient{
-   background-image: linear-gradient(90deg, rgb(155, 234, 166), rgb(54, 192, 237));  -webkit-background-clip: text;
+   background-image:linear-gradient(90deg, #31E6C8 0%, #10B2E6 100%);
 
 }
 .h1-heading{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size:50px;
   font-weight:700;
-  color: #fff;
+  color: #0058A5;
   line-height: 1.3em;
 }
 .para-text{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size:22px;
+  font-family: 'Inter', sans-serif;
+  font-size:20px;
   font-weight:400;
-  color: #fff;
+  color: #666;
   line-height: 1.3em;
 }
 .bg-card-2{
-  background-color: #f1f1f1
+  background-color: #f1f1f1;
 }
 .icon-box{
   background-color: #fff;
 }
 .button-item{
-  background-color: transparent !important;
+  background: linear-gradient(90deg, #65FFF0 0%, #17D7FF 100%);
+  color:#000;
+ font-family: 'Inter', sans-serif;
+font-weight: 500;
+padding: 15px 36px;
+border-radius: 12px;
+font-size: 16px;
 }
 .button-item:hover{
   background-color: #fff !important;
 }
+.button-item-2{
+  padding: 10px 25px !important;
+  font-size: 14px !important;
+}
+.button-cf{
+  padding: 10px 75px !important;
+}
 .section-seamless{
-    background: linear-gradient(90deg, rgb(0, 62, 148) 0%, rgb(0, 112, 136) 100%);
+  background: linear-gradient(90deg, rgb(0, 62, 148) 0%, rgb(0, 112, 136) 100%);
+  background-size:cover
+}
+.stats-gradient-section{
+  background: linear-gradient(90deg, #65FFF0 0%, #10B2E6 100%);
+}
+.bg-gradient-hero{
+  background: url(/src/assets/bg-hero.png);
+}
+.hero-element-image{
+  width: 400px;
+  opacity: 1;
+  transform: scaleX(-1) rotate(60deg);
+  position: relative;
+  left: -250px;
+  bottom: -180px;
+}
+@media (min-width: 768px) {
+  .hero-element-image {
+    width: 500px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-element-image {
+    width: 600px;
+  }
+}
+.text-desc{
+  color: #000;
+}
+.text-heading{
+  line-height: 1.1em !important;
+}
+/* Stats Section Styling */
+.stat-value {
+  font-size: 48px;
+  font-weight: 700;
+  background-image: linear-gradient(90deg, #31E6C8 0%, #10B2E6 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  margin-bottom: -10px;
+}
 
+.stat-subtitle {
+  font-size: 28px;
+  font-weight: 400;
+  background: linear-gradient(90deg, #31E6C8 0%, #10B2E6 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-family: 'Inter', sans-serif;
+}
+
+.stat-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0058A5;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: -5px !important;
+  margin-top: 5px;
+}
+
+.stat-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+}
+.card-1{
+  padding: 50px 50px 50px 0px;
+}
+.card-2{
+  padding: 50px 10px 50px 90px;
+} 
+.feature-card-bg{
+  background: #0058A5;
+}
+.feature-card-bg-2{
+  background: #169E7E;
+}
+.row-1{
+  padding: 50px 0px 50px 50px;
+}
+.row-2{
+  padding: 50px 50px 50px 0px;
+}
+.clients-bg{
+   background:linear-gradient(to bottom, #ffffff 0%, #A7FFED 55%, #EBFCFA 90%, #ffffff 100%);
+}
+.footer-img{
+  width: 70%;
+
+}
+.image-div{
+  padding-left: 30%;
+}
+.gradient-border-button {
+  background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(90deg, #9BEAA6, #36C0ED) border-box;
+  border: 3px solid transparent;
+}
+/* Hero Background Decorations */
+.hero-bg-left {
+     position: absolute;
+    left: -5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 50rem;
+    z-index: 0;
+
+}
+
+.hero-bg-right {
+  position: absolute;
+  right: -9rem;
+  top: 50%;
+  transform: translateY(-50%) scaleX(-1);
+  /* width: 16rem;
+  height: 16rem; */
+  opacity: 1;
+  z-index: 0;
 }

@@ -51,67 +51,50 @@ const stats = [
 
 const Stats = () => {
   return (
-    <section className="py-24 section-alt relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-glow/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
-      
+    <section className="py-24 stats-gradient-section relative overflow-hidden">
       <div className="container px-4 relative z-10">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-            How PulseBoard Redefines <span className="text-gradient">Healthcare Management</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Experience the measurable edge that intelligent automation brings
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {stats.map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <Card 
-                key={index}
-                className="p-8 bg-card border-0 shadow-card hover:shadow-lg transition-all duration-300 group rounded-2xl"
-                style={{ 
-                  animation: `fade-in 0.6s ease-out forwards`,
-                  animationDelay: stat.delay,
-                  opacity: 0,
-                }}
-              >
-                <div className="flex flex-col items-center text-center space-y-4">
-                  <div className="p-4 bg-section-alt rounded-2xl group-hover:bg-primary/10 transition-colors">
-                    <Icon className="w-8 h-8 text-primary" />
-                  </div>
-                  
-                  {stat.prefix && (
-                    <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-                      {stat.prefix}
-                    </span>
-                  )}
-                  
-                  <div className="space-y-1">
-                    <div className="text-4xl font-bold text-primary group-hover:scale-105 transition-transform">
-                      {stat.value}
-                    </div>
-                    {stat.suffix && (
-                      <div className="text-lg font-medium text-muted-foreground uppercase">
-                        {stat.suffix}
-                      </div>
-                    )}
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-foreground">
-                    {stat.label}
-                  </h3>
-                  
-                  <p className="text-muted-foreground leading-relaxed">
-                    {stat.description}
-                  </p>
-                </div>
-              </Card>
-            );
-          })}
+        <div className="grid grid-cols-1 lg:grid-cols-10 gap-6 items-stretch">
+          
+          {/* First Column - 40% width (4 out of 10 columns) */}
+          <div className="lg:col-span-4 flex flex-col justify-center space-y-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground text-heading">
+              How PulseBoard Redefines Healthcare Management
+            </h2>
+            <p className="text-xl text-muted-foreground text-desc">
+              Experience the measurable edge that <br></br>intelligent automation brings
+            </p>
+          </div>
+
+          {/* Second Column - 20% width (2 out of 10 columns) */}
+          <div className="lg:col-span-2 bg-white rounded-xl py-10 px-8 shadow-lg flex flex-col space-y-3">
+            <div className="stat-value">20+</div>
+            <div className="stat-subtitle">Hours</div>
+            <h3 className="stat-title">Saves Time</h3>
+            <p className="stat-description">
+              Weekly saved through automated workflows and tracking workflows and tracking workflows
+            </p>
+          </div>
+
+          {/* Third Column - 20% width (2 out of 10 columns) */}
+          <div className="lg:col-span-2 bg-white rounded-2xl py-10 px-8 shadow-lg flex flex-col space-y-3">
+            <div className="stat-value">75%</div>
+            <div className="stat-subtitle">Faster</div>
+            <h3 className="stat-title">Lead Conversion</h3>
+            <p className="stat-description">
+              Higher conversion rates through intelligent follow-ups ntelligent follow-ups ntelligent follow-ups ntelligent
+            </p>
+          </div>
+
+          {/* Fourth Column - 20% width (2 out of 10 columns) */}
+          <div className="lg:col-span-2 bg-white rounded-2xl py-10 px-8 shadow-lg flex flex-col space-y-3">
+            <div className="stat-value">90%</div>
+            <div className="stat-subtitle">Faster</div>
+            <h3 className="stat-title">Better Team</h3>
+            <p className="stat-description">
+              Performance improvement with data-driven insights Performance improvement with data-driven insights
+            </p>
+          </div>
+
         </div>
       </div>
     </section>

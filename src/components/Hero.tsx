@@ -1,10 +1,20 @@
 import { Button } from "@/components/ui/button";
+import heroElement from "@/assets/hero-element.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-hero">
+      {/* Hero decorative element - bottom left */}
+      <div className="absolute left-0 bottom-0 z-0 pointer-events-none">
+        <img 
+          src={heroElement} 
+          alt="" 
+          className="hero-element-image"
+        />
+      </div>
+      
       {/* Wave decoration */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <svg 
           className="absolute bottom-0 left-0 w-full h-auto opacity-10"
           viewBox="0 0 1440 320"
@@ -29,40 +39,62 @@ const Hero = () => {
             transform="translate(100 100)" 
           />
         </svg>
-      </div>
+      </div> */}
       
-      {/* Content */}
-      <div className="container relative z-10 px-4 py-20 text-center">
-        <div className="max-w-5xl mx-auto space-y-8 animate-fade-in">
-          <h1 className="h1-heading">
-            Transform Healthcare Communication with{" "}
-            <span className="text-white drop-shadow-lg text-gradient">PulseBoard</span>
-          </h1>
+      {/* Content - Two Column Layout */}
+      <div className="container relative z-10 px-4 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           
-          <p className="para-text">
-            Streamline inquiries, track conversions, and empower your team with real-time insights — 
-            all in one intelligent platform
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-            <Button 
-              size="lg" 
-              className="bg-white text-primary hover:bg-white/95 text-lg px-10 py-7 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              Book Demo
-            </Button>
-            <Button 
-              size="lg" 
-              className="border-2 border-white bg-transparent text-white hover:bg-white/10 text-lg px-10 py-7 rounded-full font-semibold backdrop-blur-sm"
-            >
-              Learn More
-            </Button>
+          {/* Left Column - Content */}
+          <div className="space-y-8 animate-fade-in text-left">
+            <h1 className="h1-heading">
+              Transform <span className="text-white text-gradient">Healthcare Communication</span> with PulseBoard
+            </h1>
+            
+            <p className="para-text">
+              Streamline inquiries, track conversions, and empower your team with real-time insights — 
+              all in one intelligent platform
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <Button 
+                size="lg" 
+                className="hover:bg-white/95 text-lg px-10 py-7 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 button-item"
+              >
+                Book Demo
+              </Button>
+              <Button 
+                size="lg" 
+                className="border-2 border-white bg-transparent text-white hover:bg-white/10 text-lg px-10 py-7 rounded-full font-semibold backdrop-blur-sm"
+              >
+                Learn More
+              </Button>
+            </div>
           </div>
+
+          {/* Right Column - Video */}
+          <div className="relative animate-fade-in">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <video 
+                className="w-full h-auto rounded-2xl"
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+              >
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              {/* Video overlay for aesthetics */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent pointer-events-none rounded-2xl"></div>
+            </div>
+          </div>
+
         </div>
       </div>
       
       {/* Bottom curve */}
-      <div className="absolute bottom-0 left-0 right-0">
+      {/* <div className="absolute bottom-0 left-0 right-0">
         <svg 
           viewBox="0 0 1440 100" 
           fill="none" 
@@ -74,7 +106,7 @@ const Hero = () => {
             fill="hsl(var(--background))"
           />
         </svg>
-      </div>
+      </div> */}
     </section>
   );
 };

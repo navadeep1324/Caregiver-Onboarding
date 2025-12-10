@@ -1,61 +1,27 @@
-const clients = [
-  {
-    name: "Interim",
-    logo: "/src/assets/Interim.jpg",
-  },
-  {
-    name: "Assured",
-    logo: "/src/assets/Assured.jpg",
-  },
-  {
-    name: "RAH",
-    logo: "/src/assets/RAH.jpg",
-  },
-  {
-    name: "home instead",
-    logo: "/src/assets/home instead.jpg",
-  },
-];
-
 const OurClients = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="container px-2">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Our <span className="text-gradient">Clients</span>
+    <section className="py-16 md:py-20 bg-[#003D82] relative overflow-hidden mt-10">
+      <div className="container px-4 relative z-10">
+        <div className="text-center max-w-4xl mx-auto space-y-6">
+          {/* Heading */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            Ready to Transform Your Healthcare Management?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            From startups to enterprises — PulseBoard keeps teams connected and efficient
+          
+          {/* Subheading */}
+          <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto">
+            Join leading healthcare organizations using PulseBoard to streamline operations and boost conversions
           </p>
-        </div>
 
-        {/* Client Logos */}
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 max-w-8xl mx-auto">
-          {clients.map((client, index) => (
-            <div 
-              key={index}
-              className="group relative bg-card rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 flex items-center justify-center min-w-[180px] h-[100px]"
-              style={{ 
-                animation: `fade-in 0.6s ease-out forwards`,
-                animationDelay: `${index * 100}ms`,
-                opacity: 0,
-              }}
-            >
-              <img 
-                src={client.logo} 
-                alt={client.name}
-                className="max-h-16 w-auto object-contain group-hover:grayscale-0 transition-all duration-300"
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* Trust Badge */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground">
-            Trusted by <span className="font-semibold text-primary">100+</span> healthcare organizations worldwide
-          </p>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+            <button className="px-8 py-3 bg-[#7FFFD4] hover:bg-[#6EEEC3] text-[#000] rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl button-item ">
+              Get Started Today
+            </button>
+            <button className="px-8 py-3 bg-white hover:bg-gray-100 text-[#000] rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl gradient-border-button">
+              Book Demo
+            </button>
+          </div>
         </div>
       </div>
     </section>
