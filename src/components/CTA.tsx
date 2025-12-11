@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const CTA = () => {
   return (
-    <section className="py-24 bg-gradient-hero relative overflow-hidden">
+    <section className="py-12 md:py-24 bg-gradient-hero relative overflow-hidden">
       {/* Wave decorations */}
       <svg
         className="absolute top-0 left-0 w-full h-auto opacity-10 rotate-180"
@@ -19,7 +19,7 @@ const CTA = () => {
 
       <div className="container px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
             Curious how real-time insights can boost your conversions?
           </h2>
 

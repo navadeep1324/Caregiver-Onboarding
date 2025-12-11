@@ -7,10 +7,10 @@ const VideoSection = () => {
   return (
     <>
       {/* Header Section */}
-      <section className="py-8 relative overflow-hidden">
+      <section className="py-6 md:py-8 relative overflow-hidden">
         <div className="container px-4 relative z-10">
           <div className="text-center space-y-3">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground">
               Our Valued <span className="text-gradient">Partners</span>
             </h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto">
@@ -21,12 +21,12 @@ const VideoSection = () => {
       </section>
 
       {/* Client Logos Section - Full Width with Gradient */}
-      <section className="py-16 relative overflow-hidden clients-bg">
+      <section className="py-10 md:py-16 relative overflow-hidden clients-bg">
         <div className="container px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {/* Right at Home */}
-              <div className="bg-white rounded-2xl p-6 shadow-md flex items-center justify-center hover:shadow-lg transition-shadow">
+              <div className="bg-white rounded-2xl p-6 flex items-center justify-center">
                 <img
                   src={rah}
                   alt="Right at Home"
@@ -35,7 +35,7 @@ const VideoSection = () => {
               </div>
 
               {/* Assured Home Nursing */}
-              <div className="bg-white rounded-2xl p-6 shadow-md flex items-center justify-center hover:shadow-lg transition-shadow">
+              <div className="bg-white rounded-2xl p-6 flex items-center justify-center">
                 <img
                   src={assured}
                   alt="Assured Home Nursing"
@@ -44,7 +44,7 @@ const VideoSection = () => {
               </div>
 
               {/* Home Instead */}
-              <div className="bg-white rounded-2xl p-6 shadow-md flex items-center justify-center hover:shadow-lg transition-shadow">
+              <div className="bg-white rounded-2xl p-6 flex items-center justify-center">
                 <img
                   src={homeInstead}
                   alt="Home Instead"
@@ -53,7 +53,7 @@ const VideoSection = () => {
               </div>
 
               {/* Interim */}
-              <div className="bg-white rounded-2xl p-6 shadow-md flex items-center justify-center hover:shadow-lg transition-shadow">
+              <div className="bg-white rounded-2xl p-6 flex items-center justify-center">
                 <img
                   src={interim}
                   alt="Interim"

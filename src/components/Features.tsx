@@ -1,36 +1,47 @@
-import { LayoutGrid } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import callTracking from "@/assets/Call Tracking.png";
+import sourceId from "@/assets/Source Identification.png";
+import teamActivity from "@/assets/Team Activity Monitoring.png";
+import journeyMapping from "@/assets/Journey Mapping.png";
+import insightsAlerts from "@/assets/Insights & Alerts.png";
+import leadSource from "@/assets/Lead Source Analysis.png";
 
 const features = [
   {
     title: "Complete Call Tracking",
     description: "Record every incoming call along with source, time, purpose, and caller details.",
+    icon: callTracking,
   },
   {
     title: "Source Identification",
     description: "Track whether prospects came from website, ads, referrals, walk-ins, or other channels.",
+    icon: sourceId,
   },
   {
     title: "Team Activity Monitoring",
     description: "See which team member handled each call and what actions were taken at every stage.",
+    icon: teamActivity,
   },
   {
     title: "Full Prospect Journey Mapping",
     description: "Follow a client's path from the first call to assessment, lead creation, and beyond.",
+    icon: journeyMapping,
   },
   {
     title: "Real-Time Insights & Alerts",
     description: "Instant visibility into new calls, pending follow-ups, and team workloads.",
+    icon: insightsAlerts,
   },
   {
     title: "Lead Source Analysis",
     description: "Identify which channels bring the highest-value prospects and generate better ROI.",
+    icon: leadSource,
   },
 ];
 
 const Features = () => {
   return (
-    <section id="features" className="py-24 bg-gradient-to-br from-cyan-50 to-blue-50 relative overflow-hidden">
+    <section id="features" className="py-12 md:py-24 bg-gradient-to-br from-cyan-50 to-blue-50 relative overflow-hidden">
       {/* Decorative wave element */}
       {/* <div className="absolute bottom-0 left-0 w-64 h-64 opacity-20">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -43,11 +54,11 @@ const Features = () => {
       </div> */}
 
       <div className="container px-4 relative z-10">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+        <div className="text-center mb-10 md:mb-16 space-y-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
             Everything Your Business Needs, <span className="text-gradient">In One Place</span>
           </h2>
-          <p className="text-xl text-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-foreground max-w-5xl mx-auto">
             Specializations that empower teams, streamline processes, and drive smarter decisions
           </p>
         </div>
@@ -57,24 +68,28 @@ const Features = () => {
             return (
               <Card
                 key={index}
-                className="p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 group rounded-3xl relative"
+                className="py-8 md:py-10 px-6 md:px-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 group rounded-2xl relative h-full flex flex-col min-h-[320px]"
                 style={{
                   animation: `fade-in 0.6s ease-out forwards`,
                   animationDelay: `${index * 100}ms`,
                   opacity: 0,
                 }}
               >
-                {/* Grid icon in top-right corner */}
-                <div className="absolute top-7 right-7">
-                  <LayoutGrid className="w-8 h-8 text-cyan-400" strokeWidth={2} />
+                {/* Icon in top-right corner */}
+                <div className="absolute top-5 right-5">
+                  <img
+                    src={feature.icon}
+                    alt={feature.title}
+                    className="w-12 h-12 object-contain"
+                  />
                 </div>
 
-                <div className="space-y-3 pr-12 pt-9">
-                  <h3 className="text-2xl font-semibold text-blue-900">
+                <div className="space-y-3 pt-6">
+                  <h3 className="text-2xl font-semibold text-blue-900 pr-16">
                     {feature.title}
                   </h3>
 
-                  <p className="text-gray-700 leading-relaxed text-sm pb-5">
+                  <p className="text-gray-700 leading-relaxed text-base pb-3">
                     {feature.description}
                   </p>
                 </div>

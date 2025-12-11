@@ -3,20 +3,17 @@ import logo from "@/assets/Pulseboard-02-02.png";
 const Footer = () => {
   return (
     <footer className="bg-[#fff]">
-      <div className="container px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-[30%_15%_15%_15%_25%] gap-8 mb-8">
+      <div className="container px-4 py-8 md:py-12">
+        <div className="grid grid-cols-2 md:grid-cols-[25%_20%_20%_35%] gap-x-4 gap-y-8 mb-8">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 col-span-2 md:col-span-1">
             <div>
-              <img src={logo} alt="PulseBoard" className="h-14 md:h-16 w-auto mb-3" />
-              <p className="text-sm text-gray-600 leading-relaxed">
-                AI-powered conversational platform <br></br>for modern businesses
-              </p>
+              <img src={logo} alt="PulseBoard" className="h-14 md:h-16 w-auto" />
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="col-span-1">
             <h3 className="font-semibold text-[#003D82] text-sm mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -43,7 +40,7 @@ const Footer = () => {
           </div>
 
           {/* Company */}
-          <div>
+          <div className="col-span-1">
             <h3 className="font-semibold text-[#003D82] text-sm mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
@@ -69,38 +66,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
-          <div>
-            <h3 className="font-semibold text-[#003D82] text-sm mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
-                  Privacy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
-                  Terms
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
-                  Security
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-gray-700 hover:text-[#10B2E6] transition-colors">
-                  Compliance
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Product Demos */}
-          <div>
-            <h3 className="font-semibold text-[#003D82] text-sm mb-4">Product Demos</h3>
+          {/* Book Demo */}
+          <div className="col-span-2 md:col-span-1 pt-4 md:pt-0">
             <button
-              className="px-6 py-2.5 bg-[#10B2E6] hover:bg-[#0EA1D5] text-white text-sm font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg button-item button-item-2"
+              className="w-auto px-6 py-2.5 bg-[#10B2E6] hover:bg-[#0EA1D5] text-white text-sm font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg button-item button-item-2"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Book a Demo

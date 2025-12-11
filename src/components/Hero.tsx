@@ -140,7 +140,7 @@ const Hero = () => {
       </div> */}
 
       {/* Content - Two Column Layout */}
-      <div className="container relative z-10 px-4 py-20">
+      <div className="container relative z-10 px-4 pt-32 pb-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
 
           {/* Left Column - Content */}
@@ -153,7 +153,7 @@ const Hero = () => {
               PulseBoard brings every call, lead, and team action into one smart dashboard—so you can see everything in real time, spot gaps instantly, and boost performance across your entire business.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+            <div className="flex flex-col sm:flex-row gap-4 pt-6 items-start">
               <Button
                 size="lg"
                 className="hover:bg-white/95 text-lg px-10 py-7 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 button-item"

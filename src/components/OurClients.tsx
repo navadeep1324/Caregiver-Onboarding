@@ -14,7 +14,8 @@ const OurClients = () => {
 
           <div className="flex justify-center items-center mt-8">
             <button
-              className="px-8 py-3 bg-white hover:bg-gray-100 text-[#000] rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="px-8 py-3 text-[#003D82] font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:opacity-90"
+              style={{ background: 'linear-gradient(90deg, #65FFF0 13%, #17D7FF 100%)' }}
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Book Demo

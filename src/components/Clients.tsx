@@ -4,10 +4,10 @@ import heroElement from "@/assets/hero-element.png";
 
 const Clients = () => {
   return (
-    <section id="solutions" className="py-16 px-4 lg:px-8 bg-white">
-      <div className="container mx-auto max-w-7xl space-y-8">
+    <section id="solutions" className="py-8 md:py-16 px-4 lg:px-8 bg-white">
+      <div className="container mx-auto max-w-7xl space-y-6 md:space-y-8">
         {/* First Section - Blue Background */}
-        <div className="feature-card-bg py-16  relative overflow-hidden rounded-3xl">
+        <div className="feature-card-bg py-8 md:py-16 relative overflow-hidden rounded-3xl">
           {/* Decorative pattern in background */}
           {/* <div className="absolute bottom-0 right-0 w-96 h-96 opacity-10">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -22,8 +22,8 @@ const Clients = () => {
             <div className="container mx-auto max-w-7xl">
               <div className="flex flex-col lg:flex-row items-center row-1">
                 {/* Left - Content */}
-                <div className="text-white space-y-6 relative z-10 lg:w-1/2 card-1">
-                  <h2 className="text-4xl md:text-5xl font-bold">
+                <div className="text-white space-y-6 relative z-10 lg:w-1/2 card-1 px-6 md:px-0">
+                  <h2 className="text-3xl md:text-5xl font-bold">
                     Performance You Can See. Results You Can Scale
                   </h2>
                   <p className="text-lg opacity-90 leading-relaxed">
@@ -50,7 +50,7 @@ const Clients = () => {
                 </div>
 
                 {/* Right - Image extending to edge */}
-                <div className="relative lg:w-1/2 w-full lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2">
+                <div className="relative lg:w-1/2 w-full lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 mt-8 lg:mt-0">
                   {/* Hero element background decoration */}
                   <div className="">
                     <img
@@ -63,7 +63,7 @@ const Clients = () => {
                   <img
                     src={group44}
                     alt="Team Performance Dashboard"
-                    className="w-full h-auto rounded-l-2xl lg:rounded-r-none relative z-10"
+                    className="w-full h-auto rounded-xl lg:rounded-l-2xl lg:rounded-r-none relative z-10 shadow-lg"
                   />
                 </div>
               </div>
@@ -72,7 +72,7 @@ const Clients = () => {
         </div>
 
         {/* Second Section - Green Background */}
-        <div className="feature-card-bg-2 py-16 relative overflow-hidden rounded-3xl">
+        <div className="feature-card-bg-2 py-8 md:py-16 relative overflow-hidden rounded-3xl">
           {/* Decorative element */}
           {/* <div className="absolute top-0 left-0 w-96 h-96 opacity-10">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -87,7 +87,7 @@ const Clients = () => {
             <div className="container mx-auto max-w-7xl">
               <div className="flex flex-col lg:flex-row items-center row-2">
                 {/* Left - Image extending to edge */}
-                <div className="relative lg:w-1/2 w-full lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 order-2 lg:order-1">
+                <div className="relative lg:w-1/2 w-full lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 order-2 lg:order-1 mt-8 lg:mt-0">
                   {/* Hero element background decoration */}
                   <div className="hero-bg-right">
                     <img
@@ -100,13 +100,13 @@ const Clients = () => {
                   <img
                     src={group45}
                     alt="Performance Analytics Dashboard"
-                    className="w-full h-auto rounded-r-2xl lg:rounded-l-none relative z-10"
+                    className="w-full h-auto rounded-xl lg:rounded-r-2xl lg:rounded-l-none relative z-10 shadow-lg"
                   />
                 </div>
 
                 {/* Right - Content */}
-                <div className="text-white space-y-6 relative z-10 lg:w-1/2 lg:ml-auto order-1 lg:order-2 card-2">
-                  <h2 className="text-4xl md:text-5xl font-bold">
+                <div className="text-white space-y-6 relative z-10 lg:w-1/2 lg:ml-auto order-1 lg:order-2 card-2 px-6 md:px-0 lg:pl-32">
+                  <h2 className="text-3xl md:text-5xl font-bold">
                     Identify What's Driving Growth, Instantly
                   </h2>
                   <p className="text-lg opacity-90 leading-relaxed">
