@@ -135,6 +135,9 @@ All colors MUST be HSL.
    background-image:linear-gradient(90deg, #31E6C8 0%, #10B2E6 100%);
 
 }
+.hero-col1{
+  padding-right:50px;
+}
 .h1-heading{
   font-family: 'Inter', sans-serif;
   font-size:50px;
@@ -303,6 +306,9 @@ font-size: 16px;
   opacity: 1;
   z-index: 0;
 }
+.video-h{
+  height: 400px;
+}
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
@@ -310,6 +316,13 @@ font-size: 16px;
     font-size: 32px;
     line-height: 1.2em;
   }
+  .video-h{
+    height: auto;
+  }
+  .hero-col1{
+  padding-right:0px;
+  padding-bottom: 20px;
+}
   
   .para-text {
     font-size: 16px;
@@ -336,8 +349,11 @@ font-size: 16px;
     font-size: 14px;
   }
   
-  .row-1, .row-2 {
+  .row-1 {
     padding: 30px 20px;
+  }
+  .row-2 {
+    padding: 0px;
   }
   
   .card-1, .card-2 {

@@ -140,11 +140,11 @@ const Hero = () => {
       </div> */}
 
       {/* Content - Two Column Layout */}
-      <div className="container relative z-10 px-4 pt-32 pb-12 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+      <div className="container relative z-10 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center max-w-8xl mx-auto ">
 
           {/* Left Column - Content */}
-          <div className="space-y-8 animate-fade-in text-left">
+          <div className="space-y-8 animate-fade-in text-left hero-col1">
             <h1 className="h1-heading">
               Monitor <span className="text-white text-gradient">Business</span> and <span className="text-white text-gradient">Team Performance</span> in One Powerful Dashboard
             </h1>
@@ -180,7 +180,7 @@ const Hero = () => {
             >
               <video
                 ref={videoRef}
-                className="w-full h-auto rounded-l cursor-pointer"
+                className="w-full video-h rounded-l cursor-pointer"
                 poster={videoPoster}
                 onClick={togglePlay}
               >

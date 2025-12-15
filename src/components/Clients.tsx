@@ -63,7 +63,7 @@ const Clients = () => {
                   <img
                     src={group44}
                     alt="Team Performance Dashboard"
-                    className="w-full h-auto rounded-xl lg:rounded-l-2xl lg:rounded-r-none relative z-10 shadow-lg"
+                    className="w-full h-auto rounded-xl lg:rounded-l-2xl lg:rounded-r-none relative z-10"
                   />
                 </div>
               </div>
@@ -84,7 +84,7 @@ const Clients = () => {
         </div> */}
 
           <div className="relative">
-            <div className="container mx-auto max-w-7xl">
+            <div className="container mx-auto max-w-8xl">
               <div className="flex flex-col lg:flex-row items-center row-2">
                 {/* Left - Image extending to edge */}
                 <div className="relative lg:w-1/2 w-full lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 order-2 lg:order-1 mt-8 lg:mt-0">
@@ -100,7 +100,7 @@ const Clients = () => {
                   <img
                     src={group45}
                     alt="Performance Analytics Dashboard"
-                    className="w-full h-auto rounded-xl lg:rounded-r-2xl lg:rounded-l-none relative z-10 shadow-lg"
+                    className="w-full h-auto rounded-xl lg:rounded-r-2xl lg:rounded-l-none relative z-10"
                   />
                 </div>
 

@@ -4,6 +4,13 @@ import rah from "@/assets/RAH.png";
 import homeInstead from "@/assets/home instead.jpg";
 
 const VideoSection = () => {
+  const logos = [
+    { src: rah, alt: "Right at Home" },
+    { src: assured, alt: "Assured Home Nursing" },
+    { src: homeInstead, alt: "Home Instead" },
+    { src: interim, alt: "Interim" },
+  ];
+
   return (
     <>
       {/* Header Section */}
@@ -24,46 +31,72 @@ const VideoSection = () => {
       <section className="py-10 md:py-16 relative overflow-hidden clients-bg">
         <div className="container px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {/* Right at Home */}
-              <div className="bg-white rounded-2xl p-6 flex items-center justify-center">
-                <img
-                  src={rah}
-                  alt="Right at Home"
-                  className="w-full h-auto object-contain max-h-16"
-                />
-              </div>
+            {/* Desktop: Grid Layout (hidden on mobile) */}
+            <div className="hidden md:grid grid-cols-4 gap-6">
+              {logos.map((logo, index) => (
+                <div key={index} className="bg-white rounded-2xl p-6 flex items-center justify-center">
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="w-full h-auto object-contain max-h-16"
+                  />
+                </div>
+              ))}
+            </div>
 
-              {/* Assured Home Nursing */}
-              <div className="bg-white rounded-2xl p-6 flex items-center justify-center">
-                <img
-                  src={assured}
-                  alt="Assured Home Nursing"
-                  className="w-full h-auto object-contain max-h-16"
-                />
-              </div>
-
-              {/* Home Instead */}
-              <div className="bg-white rounded-2xl p-6 flex items-center justify-center">
-                <img
-                  src={homeInstead}
-                  alt="Home Instead"
-                  className="w-full h-auto object-contain max-h-16"
-                />
-              </div>
-
-              {/* Interim */}
-              <div className="bg-white rounded-2xl p-6 flex items-center justify-center">
-                <img
-                  src={interim}
-                  alt="Interim"
-                  className="w-full h-auto object-contain max-h-16"
-                />
+            {/* Mobile: Infinite Scroll (visible only on mobile) */}
+            <div className="md:hidden relative overflow-hidden">
+              <div className="flex items-center">
+                <div className="animate-infinite-scroll flex gap-6">
+                  {/* First set of logos */}
+                  {logos.map((logo, index) => (
+                    <div key={`first-${index}`} className="flex-shrink-0 w-[200px]">
+                      <div className="bg-white rounded-2xl p-6 flex items-center justify-center h-[120px]">
+                        <img
+                          src={logo.src}
+                          alt={logo.alt}
+                          className="w-full h-auto object-contain max-h-16"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                  {/* Duplicate set for seamless loop */}
+                  {logos.map((logo, index) => (
+                    <div key={`second-${index}`} className="flex-shrink-0 w-[200px]">
+                      <div className="bg-white rounded-2xl p-6 flex items-center justify-center h-[120px]">
+                        <img
+                          src={logo.src}
+                          alt={logo.alt}
+                          className="w-full h-auto object-contain max-h-16"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <style>{`
+        @keyframes infinite-scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+
+        .animate-infinite-scroll {
+          animation: infinite-scroll 20s linear infinite;
+        }
+
+        .animate-infinite-scroll:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </>
   );
 };
