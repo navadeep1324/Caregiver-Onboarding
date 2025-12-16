@@ -8,7 +8,7 @@ const OurClients = () => {
           </h2>
 
           {/* Subheading */}
-          <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-white/90 max-w-3xl mx-auto">
             Connect with us and learn how PulseBoard can give your business the edge.
           </p>
 

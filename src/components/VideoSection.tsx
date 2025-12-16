@@ -21,7 +21,7 @@ const VideoSection = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-foreground">
               Our Valued <span className="text-gradient">Partners</span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            <p className="text-xl text-black-700 max-w-3xl mx-auto">
               Proudly serving clients who value efficiency, insights, and results.
             </p>
           </div>

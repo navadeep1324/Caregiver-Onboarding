@@ -43,14 +43,14 @@ const ContactForm = () => {
           {/* Header */}
           <div className="text-center mb-8 space-y-2">
             <h2 className="text-3xl md:text-5xl font-bold text-[#003D82]">
-              Get in <span className="text-[#10B2E6]">Touch</span>
+              Get in Touch
             </h2>
-            <p className="text-base text-gray-800">
-              Talk to us to see how real-time visibility can transform your business.
+            <p className="text-base text-gray-800 text-xl">
+              Talk to us to see how real-time visibility can transform your business.  Schedule a demo now!
             </p>
-            <p className="text-base text-gray-800">
-              Schedule a demo now!
-            </p>
+            {/* <p className="text-base text-gray-800 text-xl">
+             
+            </p> */}
           </div>
 
           {/* Form Card */}

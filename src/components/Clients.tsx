@@ -23,7 +23,7 @@ const Clients = () => {
               <div className="flex flex-col lg:flex-row items-center row-1">
                 {/* Left - Content */}
                 <div className="text-white space-y-6 relative z-10 lg:w-1/2 card-1 px-6 md:px-0">
-                  <h2 className="text-3xl md:text-5xl font-bold pr-16">
+                  <h2 className="text-3xl md:text-5xl font-bold pr-16" style={{ lineHeight: '1.2' }}>
                     Performance You Can See. Results You Can Scale
                   </h2>
                   <p className="text-lg leading-relaxed text-white">
@@ -106,7 +106,7 @@ const Clients = () => {
 
                 {/* Right - Content */}
                 <div className="text-white space-y-6 relative z-10 lg:w-1/2 lg:ml-auto order-1 lg:order-2 card-2 px-6 md:px-0 lg:pl-32">
-                  <h2 className="text-3xl md:text-5xl font-bold">
+                  <h2 className="text-3xl md:text-5xl font-bold" style={{ lineHeight: '1.2' }}>
                     Identify What's Driving Growth, Instantly
                   </h2>
                   <p className="text-lg leading-relaxed">
