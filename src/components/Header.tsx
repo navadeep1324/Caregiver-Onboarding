@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-lg border-b border-gray-200 shadow-[0_4px_12px_rgba(0,88,165,0.15)]">
-      <div className="container px-4 py-3 md:py-4">
+      <div className="container px-4 md:py-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img src={logo} alt="PulseBoard" className="h-12 md:h-16 w-auto" />

@@ -1,7 +1,7 @@
 import assured from "@/assets/Assured.png";
 import interim from "@/assets/Interim.jpg";
 import rah from "@/assets/RAH.png";
-import homeInstead from "@/assets/home instead.jpg";
+import homeInstead from "@/assets/home instead.png";
 
 const VideoSection = () => {
   const logos = [
@@ -9,6 +9,7 @@ const VideoSection = () => {
     { src: assured, alt: "Assured Home Nursing" },
     { src: homeInstead, alt: "Home Instead" },
     { src: interim, alt: "Interim" },
+
   ];
 
   return (
@@ -28,7 +29,7 @@ const VideoSection = () => {
       </section>
 
       {/* Client Logos Section - Full Width with Gradient */}
-      <section className="py-10 md:py-16 relative overflow-hidden clients-bg">
+      <section className="py-10 md:py-16 relative overflow-hidden clients-bg mb-16">
         <div className="container px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             {/* Desktop: Grid Layout (hidden on mobile) */}

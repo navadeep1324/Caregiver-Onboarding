@@ -9,7 +9,7 @@ import leadSource from "@/assets/Lead Source Analysis.png";
 const features = [
   {
     title: "Complete Call Tracking",
-    description: "Record every incoming call along with source, time, purpose, and caller details.",
+    description: "Record every incoming call along with its source, time, purpose, caller information, and resolution status.",
     icon: callTracking,
   },
   {
@@ -63,12 +63,12 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 max-w-4xl mx-auto">
           {features.map((feature, index) => {
             return (
               <Card
                 key={index}
-                className="py-8 md:py-10 px-6 md:px-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 group rounded-2xl relative h-full flex flex-col min-h-[320px]"
+                className="py-8 md:py-10 px-6 md:px-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 group rounded-2xl relative h-full flex flex-col"
                 style={{
                   animation: `fade-in 0.6s ease-out forwards`,
                   animationDelay: `${index * 100}ms`,
@@ -84,12 +84,12 @@ const Features = () => {
                   />
                 </div>
 
-                <div className="space-y-3 pt-6">
-                  <h3 className="text-2xl font-semibold text-blue-900 pr-16">
+                <div className="space-y-3 pt-12">
+                  <h3 className="text-2xl font-semibold text-blue-900 pr-2">
                     {feature.title}
                   </h3>
 
-                  <p className="text-gray-700 leading-relaxed text-base pb-3">
+                  <p className="text-gray-700 leading-relaxed text-base pb-3 card-text">
                     {feature.description}
                   </p>
                 </div>

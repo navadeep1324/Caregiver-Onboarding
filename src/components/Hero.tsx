@@ -101,7 +101,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-hero">
+    <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Hero decorative element - bottom left */}
       <div className="absolute left-0 bottom-0 z-0 pointer-events-none">
         <img
@@ -140,7 +140,7 @@ const Hero = () => {
       </div> */}
 
       {/* Content - Two Column Layout */}
-      <div className="container relative z-10 md:py-20">
+      <div className="container relative z-10 pt-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center max-w-8xl mx-auto ">
 
           {/* Left Column - Content */}
@@ -171,7 +171,7 @@ const Hero = () => {
           </div>
 
           {/* Right Column - Video */}
-          <div className="relative animate-fade-in">
+          <div className="relative animate-fade-in pb-12">
             <div
               className="relative rounded-2xl overflow-hidden shadow-2xl group border-8 border-transparent"
               style={{

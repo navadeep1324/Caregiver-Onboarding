@@ -199,6 +199,9 @@ font-size: 16px;
   .hero-element-image {
     width: 500px;
   }
+  .stat-section{
+    padding: 0px 50px
+  }
 }
 @media (min-width: 1024px) {
   .hero-element-image {
@@ -251,6 +254,9 @@ font-size: 16px;
   color: #333;
   line-height: 1.5;
   font-family: 'Inter', sans-serif;
+  /* word-break: break-word;
+ hyphens: auto;
+  overflow-wrap: break-word;  */
 }
 .card-1{
   padding: 50px 50px 50px 0px;
@@ -309,6 +315,23 @@ font-size: 16px;
 .video-h{
   height: 400px;
 }
+.card-text{
+  /* word-break: break-word;
+  hyphens: auto;
+  overflow-wrap: break-word;  */
+}
+.footer-col1{
+  margin-left: 40px;
+}
+.footer-col2{
+  margin-left: 100px;
+}
+.footer-col3{
+  margin-left: 100px;
+}
+.footer-col4{
+  margin-left: 100px;
+}
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
@@ -316,12 +339,33 @@ font-size: 16px;
     font-size: 32px;
     line-height: 1.2em;
   }
+  .feature-card-bg{
+    padding-left: 25px;
+  }
+  .card-image1{
+    width: 150% !important;
+    max-width: 150% !important;
+  
+    margin-left:-55px;
+  }
   .video-h{
     height: auto;
   }
   .hero-col1{
   padding-right:0px;
   padding-bottom: 20px;
+}
+.footer-col1{
+  margin-left: 10px;
+}
+.footer-col2{
+  margin-left: 10px;
+}
+.footer-col3{
+  margin-left: 10px;
+}
+.footer-col4{
+  margin-left: 10px;
 }
   
   .para-text {
@@ -342,6 +386,9 @@ font-size: 16px;
   
   .stat-description {
     font-size: 13px;
+    word-break: break-word;
+   hyphens: auto;
+  overflow-wrap: break-word; 
   }
   
   .button-item {
@@ -350,14 +397,17 @@ font-size: 16px;
   }
   
   .row-1 {
-    padding: 30px 20px;
+    padding: 0px 20px;
   }
   .row-2 {
     padding: 0px;
   }
   
-  .card-1, .card-2 {
+  .card-1 {
     padding: 30px 20px;
+  }
+  .card-2{
+    padding: 0px;
   }
   
   .text-heading {

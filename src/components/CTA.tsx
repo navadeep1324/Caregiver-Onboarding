@@ -20,7 +20,7 @@ const CTA = () => {
       <div className="container px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Curious how real-time insights can boost your conversions?
+            Curious how <span className="text-gradient">real-time insights</span> can boost your conversions?
           </h2>
 
           <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
