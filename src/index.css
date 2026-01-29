@@ -1,0 +1,463 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 24% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 24% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 24% 16%;
+
+    /* Navy Blue to Teal gradient - rgb(0, 62, 148) to rgb(0, 112, 136) */
+    --primary: 215 100% 29%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 186 100% 27%;
+    
+    /* Light cyan - rgb(219, 249, 255) */
+    --secondary: 195 100% 93%;
+    --secondary-foreground: 215 100% 29%;
+
+    --muted: 195 60% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 195 100% 93%;
+    --accent-foreground: 215 100% 29%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 215 100% 29%;
+
+    --radius: 0.75rem;
+    
+    /* Main gradient: rgb(0, 62, 148) to rgb(0, 112, 136) */
+    --gradient-hero: linear-gradient(90deg, hsl(215 100% 29%), hsl(186 100% 27%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(195 100% 97%));
+    
+    /* Section alternate background */
+    --section-alt: 195 100% 93%;
+    
+    --shadow-glow: 0 0 40px hsl(215 100% 29% / 0.15);
+    --shadow-card: 0 10px 30px -10px hsl(215 100% 29% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 24% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 24% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 24% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 215 100% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 186 100% 35%;
+
+    --secondary: 210 24% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 24% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 210 24% 15%;
+    --accent-foreground: 186 100% 50%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 24% 15%;
+    --input: 210 24% 15%;
+    --ring: 215 100% 40%;
+    
+    --gradient-hero: linear-gradient(90deg, hsl(215 100% 25%), hsl(186 100% 22%));
+    --gradient-card: linear-gradient(180deg, hsl(210 24% 10%), hsl(186 100% 8%));
+    --section-alt: 210 24% 12%;
+    --shadow-glow: 0 0 40px hsl(215 100% 40% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(215 100% 40% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .section-alt {
+    background-color: hsl(var(--section-alt));
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-hero);
+  }
+}
+.adv-sec{
+  padding: 5% 0px 10% 0px;
+}
+.h2-heading{
+  font-size: 2rem;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .h2-heading {
+    font-size: 2.5rem;
+  }
+}
+.h3-heading{
+  font-size: 1.35rem;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .h3-heading {
+    font-size: 1.6rem;
+  }
+}
+.text-gradient{
+   background-image:linear-gradient(90deg, #31E6C8 0%, #10B2E6 100%);
+
+}
+.footer-rights{
+   background-image:linear-gradient(90deg, #64FEF0 10%, #15B6E7 100%);
+}
+.details-img{
+  margin-top: 20px;
+}
+@media (min-width: 1024px) {
+  .details-img {
+    margin-top: -33%;
+  }
+}
+.hero-col1{
+  padding-right:50px;
+}
+.h1-heading{
+  font-family: 'Inter', sans-serif;
+  font-size:50px;
+  font-weight:700;
+  color: #0058A5;
+  line-height: 1.1em;
+}
+.para-text{
+  font-family: 'Inter', sans-serif;
+  font-size:20px;
+  font-weight:400;
+  color: #666;
+  line-height: 1.3em;
+}
+.bg-card-2{
+  background-color: #f1f1f1;
+}
+.icon-box{
+  background-color: #fff;
+}
+.button-item{
+  background: linear-gradient(90deg, #65FFF0 0%, #17D7FF 100%);
+  color:#000;
+ font-family: 'Inter', sans-serif;
+font-weight: 500;
+padding: 15px 36px;
+border-radius: 12px;
+font-size: 16px;
+}
+.button-item:hover{
+  background-color: #fff !important;
+}
+.button-item-2{
+  padding: 10px 25px !important;
+  font-size: 14px !important;
+}
+.button-cf{
+  padding: 10px 75px !important;
+}
+.section-seamless{
+  background: linear-gradient(90deg, rgb(0, 62, 148) 0%, rgb(0, 112, 136) 100%);
+  background-size:cover
+}
+.stats-gradient-section{
+  /* background: linear-gradient(90deg, #65FFF0 0%, #10B2E6 100%); */
+  background-color: #00C0E8;
+}
+.bg-gradient-hero{
+  background: url(/src/assets/bg-hero.png);
+}
+.hero-element-image{
+  width: 10%;
+  max-width: 100%;
+  opacity: 1;
+  transform: scaleX(-1) rotate(180deg);
+  position: relative;
+  left: -250px;
+  bottom: -280px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .hero-element-image {
+    width: 100px;
+    display: block;
+  }
+  .stat-section{
+    padding: 0px 50px
+  }
+  .features-txt{
+    margin-top: -120px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-element-image {
+    width: 600px;
+  }
+}
+.text-desc{
+  color: #000;
+}
+.text-heading{
+  line-height: 1.1em !important;
+}
+/* Stats Section Styling */
+.stat-value {
+  font-size: 48px;
+  font-weight: 700;
+  background-image: linear-gradient(90deg, #31E6C8 0%, #10B2E6 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-family: 'Inter', sans-serif;
+  line-height: 1;
+  margin-bottom: -10px;
+}
+
+.stat-subtitle {
+  font-size: 28px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #31E6C8 0%, #10B2E6 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-family: 'Inter', sans-serif;
+}
+
+.stat-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0058A5;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: -5px !important;
+  margin-top: 5px;
+}
+
+.stat-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  /* word-break: break-word;
+ hyphens: auto;
+  overflow-wrap: break-word;  */
+}
+.card-1{
+  padding: 50px 50px 50px 0px;
+}
+.card-2{
+  padding: 50px 10px 50px 90px;
+} 
+.feature-card-bg{
+  background: #0058A5;
+}
+.feature-card-bg-2{
+  background: #169E7E;
+}
+.row-1{
+  padding: 50px 0px 50px 50px;
+}
+.row-2{
+  padding: 50px 50px 50px 0px;
+}
+.clients-bg{
+   background:linear-gradient(to bottom, #ffffff 0%, #A7FFED 55%, #EBFCFA 90%, #ffffff 100%);
+}
+.footer-img{
+  width: 70%;
+
+}
+.image-div{
+  padding-left: 30%;
+}
+.gradient-border-button {
+  background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(90deg, #9BEAA6, #36C0ED) border-box;
+  border: 3px solid transparent;
+}
+
+.video-h{
+  height: 400px;
+}
+.card-text{
+  /* word-break: break-word;
+  hyphens: auto;
+  overflow-wrap: break-word;  */
+}
+.footer-col1{
+  margin-left: 40px;
+}
+.footer-col2{
+  margin-left: 100px;
+}
+.footer-col3{
+  margin-left: 100px;
+}
+.footer-col4{
+  margin-left: 100px;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .h1-heading {
+    font-size: 32px;
+    line-height: 1.2em;
+  }
+  .feature-card-bg{
+    padding-left: 25px;
+  }
+
+  .video-h{
+    height: auto;
+  }
+  .hero-col1{
+  padding-right:0px;
+  padding-bottom: 20px;
+}
+.footer-col1{
+  margin-left: 10px;
+}
+.footer-col2{
+  margin-left: 10px;
+}
+.footer-col3{
+  margin-left: 10px;
+}
+.footer-col4{
+  margin-left: 10px;
+}
+  
+  .para-text {
+    font-size: 16px;
+  }
+  
+  .stat-value {
+    font-size: 36px;
+  }
+  
+  .stat-subtitle {
+    font-size: 22px;
+  }
+  
+  .stat-title {
+    font-size: 16px;
+  }
+  
+  .stat-description {
+    font-size: 13px;
+    word-break: break-word;
+   hyphens: auto;
+  overflow-wrap: break-word; 
+  }
+  
+  .button-item {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+  
+  .row-1 {
+    padding: 0px 20px;
+  }
+  .row-2 {
+    padding: 0px;
+  }
+  
+  .card-1 {
+    padding: 30px 20px;
+  }
+  .card-2{
+    padding: 0px;
+  }
+  
+  .text-heading {
+    font-size: 28px;
+    line-height: 1.2em !important;
+  }
+  
+  .footer-img {
+    width: 100%;
+  }
+  
+  .image-div {
+    padding-left: 0;
+  }
+  .details-img {
+    margin-top: -82px;
+  }
+  .button-cf {
+    padding: 10px 40px !important;
+  }
+  .hero-bg-left, .hero-bg-right {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .solutions-row {
+    flex-direction: column !important;
+  }
+  .solutions-col-img {
+    width: 100% !important;
+    order: 2 !important;
+  }
+  .solutions-col-txt {
+    width: 100% !important;
+    order: 1 !important;
+  }
+}
