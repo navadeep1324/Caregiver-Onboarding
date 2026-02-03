@@ -57,7 +57,7 @@ Set up a post, manage hiring stages, and track everything until onboarding.     
           {/* Right Column - Calendar Interface with Decorative Background (60%) */}
           <div className="w-full lg:w-[60%] relative flex justify-center lg:justify-end">
             <div className="relative z-10 w-full max-w-2xl">
-              <div className="relative z-10 overflow-hidden">
+              <div className="relative z-10 overflow-hidden px-16">
                 <img
                   src={scheduleTestImg}
                   alt="Schedule Test Interface"
